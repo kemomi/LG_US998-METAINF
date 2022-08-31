@@ -1,0 +1,16 @@
+ui_print("---------------------------------");
+ui_print("*********************************");
+ui_print("    LG US998 安卓9.0  0056基带   ");
+ui_print("*********************************");
+ui_print("---------------------------------");
+ui_print("-------- Flash Firmware ---------");
+set_progress(0.100000);
+package_extract_file("modem", "/dev/block/bootdevice/by-name/modem");
+package_extract_file("xbl", "/dev/block/bootdevice/by-name/xbl");
+package_extract_file("xbl2", "/dev/block/bootdevice/by-name/xbl2");
+set_progress(0.700000);
+ui_print(" ");
+set_progress(0.900000);
+ui_print("-----刷入完成，重启系统即可-----");
+set_progress(1.000000);
+
